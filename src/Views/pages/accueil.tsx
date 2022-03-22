@@ -1,0 +1,39 @@
+import React from "react";
+
+const Accueil = () => {
+  return (
+    <div className="w-full container-fluid mx-auto font-[Helvetica]">
+      <div className="w-full h-52 bg-slate-700 flex justify-center items-center">
+        <div className="content-btn">
+          <button
+            type="button"
+            className="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg "
+          >
+            Contactez moi
+          </button>
+        </div>
+      </div>
+      <div className="w-full mt-9">
+        <h3 className="text-2xl text-center">
+          À propos de Références & Excellence{" "}
+        </h3>
+        <div className="flex items-center justify-center mt-9">
+          <div className="border-2 border-black h-96  w-96 mr-5">
+            <h2 className="text-xl m-[2em] text-center">
+              Atouts de Références & Excellence
+            </h2>
+          </div>
+          <div className="border-2 border-black h-96  w-96 mr-5">
+            <h2 className="text-xl m-[2em] text-center">Contacts</h2>
+          </div>
+          <div className="border-2 border-black h-96  w-96 ">
+            <h2 className="text-xl m-[2em] text-center">
+              Zones d'intervention
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Accueil;
