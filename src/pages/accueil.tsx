@@ -2,19 +2,19 @@ import React from "react";
 
 const Accueil = () => {
   return (
-    <div className="w-full container-fluid mx-auto font-[Helvetica]">
+    <div className="w-full container-fluid mx-auto font-body font-poppins my-7">
       <div className="w-full h-52 bg-slate-700 flex justify-center items-center">
         <div className="content-btn">
           <button
             type="button"
-            className="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg "
+            className="bg-zinc-800  text-white text-md leading-6 font-medium py-2 px-3  "
           >
             Contactez moi
           </button>
         </div>
       </div>
       <div className="w-full mt-9">
-        <h3 className="text-2xl text-center">
+        <h3 className="text-2xl text-center font-extrabold uppercase">
           À propos de Références & Excellence{" "}
         </h3>
         <div className="flex items-center justify-center mt-9">

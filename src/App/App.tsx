@@ -1,11 +1,20 @@
 import React from "react";
-import Accueil from "../Views/pages/accueil";
+import { Routes, Route } from "react-router-dom";
+import Header from "../components/header/header";
+import Accueil from "../pages/accueil";
+import Contact from "../pages/contact";
+import Realisations from "../pages/realisations";
 
 function App() {
   return (
-    <div className="App">
-      <Accueil />
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="realisations" element={<Realisations />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
+    </>
   );
 }
 

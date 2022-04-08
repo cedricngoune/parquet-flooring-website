@@ -9,8 +9,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      body: ["Poppins", "Roboto"],
-      sans: ["Helvetica"],
+      poppins: ["Poppins", "sans-serif"],
+      Helvetica: ["Helvetica", "sans-serif"],
     },
   },
   variants: {
