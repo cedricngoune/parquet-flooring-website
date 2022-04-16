@@ -5,3 +5,16 @@
 @layer base {
   font-family: Poppins, Roboto;
 }
+
+section::after,
+section::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background-color: black;
+  transform: skewY(-2deg);
+  z-index: -4;
+}

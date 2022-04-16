@@ -1,6 +1,6 @@
 {
-  "name": "laurent-website",
-  "version": "0.1.0",
+  "name": "flooring-website",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
