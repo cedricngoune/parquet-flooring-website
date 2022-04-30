@@ -8,4 +8,10 @@
 .data-img:hover {
   filter: brightness(50%) !important;
   cursor: pointer;
+  transition: all ease-in-out 100ms;
+}
+.carousel {
+  display: inline-flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
 }

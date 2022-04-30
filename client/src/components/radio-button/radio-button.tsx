@@ -27,7 +27,9 @@ const Radiobutton: FC<RadioProps> = ({
         onChange={onCheck}
         value={value}
       />
-      <label htmlFor={id}>{label} </label>
+      <label className="font-normal text-lg" htmlFor={id}>
+        {label}{" "}
+      </label>
     </>
   );
 };

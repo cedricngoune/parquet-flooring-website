@@ -1,11 +1,14 @@
 import React from "react";
-import Header from "components/header/header";
 import Realisations from "./realisations";
 import Contact from "./contact";
-import iconService from "assets/images/icons/servicesIcon.png";
-import iconLocation from "assets/images/icons/location.png";
-import iconAtout from "assets/images/icons/atoutsIcon.png";
 import { BsArrowRight } from "react-icons/bs";
+import { Link, animateScroll as scroll } from "react-scroll";
+
+import iconAtout from "assets/images/icons/atoutIcon.png";
+import iconLocation from "assets/images/icons/locationIcon.png";
+import iconMap from "assets/images/icons/map_france.png";
+import iconService from "assets/images/icons/serviceIcon.png";
+
 const divStyle = {
   minHeight: "75vh",
 };
@@ -15,102 +18,107 @@ const Home = () => {
     <div className="w-full h-full min-h-full container-fluid mx-auto font-body font-poppins">
       {/* Banner section  */}
       <section className="bg-hero-cover bg-cover bg-center ">
-        <Header />
         <div className="w-full h-screen relative flex justify-center items-center flex-col">
-          <div className="box-content text-center mb-20">
-            <h1 className="text-6xl font-extrabold text-white">
+          <div className="box-content text-center ">
+            <h1 className="text-7xl font-extrabold text-white">
               Références & Excellence
             </h1>
-            <p className="text-2xl text-white my-5">
-              Spécialiste dans la pose de parquet et sols
+            <p className="text-3xl text-white my-5">
+              Spécialiste dans la pose de parquets et de sols
             </p>
-            <button
+            <Link
+              to="section-contact"
               type="button"
-              className="bg-transparent border group hover:border-green-900 hover:bg-green-900  border-white transition-all text-white py-3 px-6 my-7"
+              className="bg-transparent cursor-pointer text-2xl border group hover:border-green-900 hover:bg-green-900  border-white transition-all text-white py-3 px-6 my-7"
+              spy={true}
+              smooth={true}
+              activeClass="active"
+              offset={-78}
+              duration={500}
             >
               Contact
               <span className="group-hover:rotate-90 duration-300">
                 <BsArrowRight className="inline ml-2" />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
       {/* Advantages section */}
-      <section className="grid grid-cols-3 my-44  mx-28 gap-6" style={divStyle}>
-        <div className="h-auto py-6 px-6 rounded-sm border border-gray-200 bg-white ">
-          <div className="flex justify-center mb-5">
-            <img
-              src={iconAtout}
-              height={42}
-              width={42}
-              alt="services"
-              className="text-center"
-            />
+      <section
+        title="section-introduction"
+        id="section-introduction"
+        className="grid grid-cols-3 my-44  mx-28 gap-6 ont-body font-Montserrat"
+        style={divStyle}
+      >
+        <div className="h-auto py-6 px-6 rounded-md border-2 border-black bg-white ">
+          <div className="flex justify-center">
+            <img src={iconAtout} alt="Atout" />
           </div>
-          <h1 className="text-xl font-bold text-center">Atouts</h1>
-          <ul className="mt-7 list-disc ">
-            <li className="leading-relaxed">
+          <h1 className="text-4xl font-semibold text-center mt-3">Atouts</h1>
+
+          <div className="mt-20">
+            <p className="font-light text-lg">
               Un savoir-faire de plus de 15 ans
-            </li>
-            <li className="leading-relaxed">
+            </p>
+
+            <p className="font-light text-lg">
               Un poseur expert certifié par Pergo et Panaget Pour les
               professionnels et les particuliers
-            </li>
-            <li className="leading-relaxed">
+            </p>
+            <p className="font-light text-lg">
               Un accompagnement sur mesure Qualité, propreté et efficacité
-            </li>
-          </ul>
-        </div>
-        <div className="h-auto py-6 px-6 rounded-sm border border-gray-200 bg-white ">
-          <div className="flex justify-center mb-5">
-            <img
-              src={iconService}
-              height={42}
-              width={42}
-              alt="services"
-              className="text-center"
-            />
+            </p>
           </div>
-          <h1 className="text-xl font-bold text-center">Prestations</h1>
-          <ul className="mt-7 list-disc">
-            <li>
+        </div>
+        <div className="h-auto py-6 px-6 rounded-md border-2 border-black bg-white ">
+          <div className="flex justify-center">
+            <img src={iconService} alt="Prestations" />
+          </div>
+          <h1 className="text-4xl font-semibold text-center mt-3">
+            Prestations
+          </h1>
+          <div className="mt-20">
+            <p className="font-light text-lg">
               Pose de parquets, sols stratifiés, sols textiles et sols vinyles
-            </li>
-            <li>Réparation</li>
-            <li>Rénovation </li>
-            <li>Restauration de parquets anciens</li>
-            <li>Ponçage</li>
-            <li>Vitrification</li>
-            <li> Teinte</li>
-            <li> Terrasses</li>
-            <li> Habillages muraux bois</li>
-            <li> Habillages d'escaliers</li>
-          </ul>
-        </div>
-        <div className="h-auto py-6 px-6 rounded-sm border border-gray-200  bg-white ">
-          <div className="flex justify-center mb-5">
-            <img
-              src={iconLocation}
-              height={42}
-              width={42}
-              alt="services"
-              className="text-center"
-            />
+            </p>
+            <p className="font-light text-lg">Réparation</p>
+            <p className="font-light text-lg">Rénovation</p>
+            <p className="font-light text-lg">
+              Restauration deparquets anciens
+            </p>
+            <p className="font-light text-lg">Ponçage</p>
+            <p className="font-light text-lg">Vitrification </p>
+            <p className="font-light text-lg">Teinte</p>
+            <p className="font-light text-lg">Terrasses</p>
+            <p className="font-light text-lg"> Habillages muraux bois</p>
+            <p className="font-light text-lg"> Habillages d'escaliers</p>
           </div>
-          <h1 className="text-xl font-bold text-center">
+        </div>
+        <div className="h-auto py-6 px-6 rounded-md border-2 border-black  bg-white ">
+          <div className="flex justify-center">
+            <img src={iconLocation} alt="location" />
+          </div>
+          <h1 className="text-4xl font-semibold text-center mt-3">
             Zones d'interventions
           </h1>
-          <ul className="mt-7 list-disc">
-            <p> Dans toute la France et pays limitrophes</p>
-          </ul>
+
+          <div className="flex justify-center">
+            <img
+              src={iconMap}
+              className="object-contain h-auto w-auto"
+              alt="Atout"
+            />
+          </div>
         </div>
       </section>
-      <section className="w-full relative bg-gray-50">
+      <section className="w-full relative bg-gray-50" id="section-realisations">
         <h1 className="text-5xl py-7 text-center font-bold">Réalisations</h1>
         <Realisations />
       </section>
-      <Contact />
+      <section title="section-contact" id="section-contact">
+        <Contact />
+      </section>
     </div>
   );
 };

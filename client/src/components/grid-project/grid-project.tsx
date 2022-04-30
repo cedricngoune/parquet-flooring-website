@@ -1,23 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projectData, ProjectProps } from "datas/projects/project-data";
+import Modal from "components/modal/modal";
 
 const GridProject = () => {
   const [data, setData] = useState<ProjectProps[]>(projectData);
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    setData(data);
+  }, [data]);
+
   return (
-    <div className="grid grid-cols-4 gap-8 mx-14">
-      {data.map(({ cover, title }, index) => (
-        <div className="relative" key={index}>
-          <img
-            className="data-img cursor-pointer hover:filter brightness-50 "
-            src={cover}
-            alt={title}
-          />
-          <h5 className="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center text-4xl text-white font-semibold">
-            {title}
-          </h5>
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="grid grid-cols-4 gap-8 mx-14">
+        {data.map(({ cover, title, images, infos }, index) => (
+          <div
+            className="w-full h-96 shadow-2xl overflow-hidden text-center relative"
+            key={index}
+          >
+            <img
+              onClick={() => {
+                setShowModal(!showModal);
+              }}
+              className="data-img cursor-pointer  "
+              src={cover}
+              alt={title}
+              title={title}
+            />
+            <Modal
+              onClose={() => setShowModal(false)}
+              images={images}
+              infos={infos}
+              showModal={showModal}
+            />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 export default GridProject;
