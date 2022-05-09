@@ -14,6 +14,8 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       Helvetica: ["Helvetica", "sans-serif"],
+      Lato: ["Lato"],
+      Karla: ["Karla"],
     },
   },
   variants: {

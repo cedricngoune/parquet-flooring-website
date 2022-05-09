@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import Radiobutton from "components/radio-button/radio-button";
 import CustomerForm from "components/forms/customer-form";
 import BusinessForm from "components/forms/business-forms";
-import { ImLinkedin2 } from "react-icons/im";
-import { FiPhone, FiMail } from "react-icons/fi";
-import { IoLocationOutline } from "react-icons/io5";
-import sideImg from "assets/images/bg-cover.jpg";
 
-type TKeyword = "Particuliers" | "Professionnels";
+import sideImg from "assets/images/sideImg.jpeg";
 
 const Contact = () => {
   const [selectedKeyword, setSelectedKeyword] = useState<string>("");
@@ -19,40 +15,44 @@ const Contact = () => {
   };
 
   return (
-    <div className="grid grid-cols-2  min-h-screen mx-20 my-36">
-      <div className="w-full ">
-        <img
-          src={sideImg}
-          alt=""
-          className="bg-side-img w-full h-full bg-center object-cover bg-no-repeat"
-        />
-      </div>
+    <>
+      <section title="section-contact" id="section-contact">
+        <div className="grid grid-cols-2  min-h-screen mx-20 my-36">
+          <div className="w-full ">
+            <img
+              src={sideImg}
+              alt=""
+              className="bg-side-img w-full h-full bg-center object-cover bg-no-repeat"
+            />
+          </div>
 
-      <div className=" bg-gray-100 ">
-        <div className="my-10 text-center">
-          <h2 className="text-3xl">Vous êtes ?:</h2>{" "}
-        </div>
-        <fieldset className="my-10 flex justify-around form-check">
-          {keywords.map((keyword, index) => (
-            <div key={index}>
-              <Radiobutton
-                label={keyword}
-                id={keyword}
-                value={keyword}
-                onCheck={handleChange}
-              />
+          <div className=" bg-gray-100 ">
+            <div className="my-10 text-center">
+              <h2 className="text-3xl">Vous êtes ?:</h2>{" "}
             </div>
-          ))}
-        </fieldset>
-        {selectedKeyword === "Un particulier" ? (
-          <CustomerForm />
-        ) : selectedKeyword === "Un professionnel" ? (
-          <BusinessForm />
-        ) : (
-          <></>
-        )}
-      </div>
-    </div>
+            <fieldset className="my-10 flex justify-around form-check">
+              {keywords.map((keyword, index) => (
+                <div key={index}>
+                  <Radiobutton
+                    label={keyword}
+                    id={keyword}
+                    value={keyword}
+                    onCheck={handleChange}
+                  />
+                </div>
+              ))}
+            </fieldset>
+            {selectedKeyword === "Un particulier" ? (
+              <CustomerForm />
+            ) : selectedKeyword === "Un professionnel" ? (
+              <BusinessForm />
+            ) : (
+              <></>
+            )}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

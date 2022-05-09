@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import DatePicker from "components/datepicker/datepicker";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IFormInput, Subject } from "types/types";
@@ -15,13 +15,16 @@ const CustomerForm = () => {
 
   const {
     register,
-    formState: { errors, isValid, isDirty },
+    formState: { errors },
     reset,
     watch,
     handleSubmit,
   } = useForm<IFormInput>();
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    watch();
+    reset();
+  };
 
   return (
     <form className="w-full px-5 py-5" onSubmit={handleSubmit(onSubmit)}>
@@ -158,7 +161,6 @@ const CustomerForm = () => {
       </div>
       <button
         type="submit"
-        disabled={!isDirty || !isValid}
         className="w-full mt-10 px-6 py-5 bg-green-900 hover:bg-white hover:text-black rounded-md shadow-md transition-all duration-75 text-white "
       >
         Envoyer message

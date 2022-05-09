@@ -1,4 +1,6 @@
 import parquetCover from "assets/images/Sol-carrières-sur-seines/cover.jpg";
+import imgParquetOne from "assets/images/Sol-carrières-sur-seines/one.jpg";
+import imgParquetTwo from "assets/images/Sol-carrières-sur-seines/two.jpg";
 import terrasseCover from "assets/images/terrase camaru-cabris/cover.png";
 import solCover from "assets/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/cover.jpg";
 import scaleCover from "assets/images/Escaliers/cover.jpg";
@@ -22,7 +24,6 @@ export interface IInfos {
 }
 export interface ProjectProps {
   title: string;
-  cover: string;
   images: Array<string>;
   infos?: IInfos;
 }
@@ -30,11 +31,7 @@ export interface ProjectProps {
 export const projectData: Array<ProjectProps> = [
   {
     title: "Parquet",
-    cover: parquetCover,
-    images: [
-      "assets/images/Sol-carrières-sur-seines/one.jpg",
-      "assets/images/Sol-carrières-sur-seines/two.jpg",
-    ],
+    images: [parquetCover, imgParquetOne, imgParquetTwo],
     infos: {
       location: "Carrières sur seine (78)",
       area: "",
@@ -43,8 +40,7 @@ export const projectData: Array<ProjectProps> = [
   },
   {
     title: "Terrasse",
-    cover: terrasseCover,
-    images: [terrasse_one, terrasse_two, terrasse_three],
+    images: [terrasseCover, terrasse_one, terrasse_two, terrasse_three],
     infos: {
       location: "Cabri(35)",
       area: "",
@@ -53,8 +49,8 @@ export const projectData: Array<ProjectProps> = [
   },
   {
     title: "Escaliers",
-    cover: scaleCover,
     images: [
+      scaleCover,
       scaleImgOne,
       scaleImgTwo,
       scaleImgThree,
@@ -68,13 +64,16 @@ export const projectData: Array<ProjectProps> = [
     },
   },
   {
-    title: "Sol",
-    cover: solCover,
-    images: [],
+    title: "Pose de sols",
+    images: [solCover],
     infos: {
       location: "Marseilles (13)",
       area: "",
       projectType: "Magasin",
     },
+  },
+  {
+    title: "Professionnels",
+    images: [],
   },
 ];

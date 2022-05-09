@@ -2,16 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 @layer base {
-  font-family: Poppins, Roboto;
+  font-family: Poppins, Roboto, Lato;
 }
-.data-img:hover {
+.card-zoom-image:hover,
+.card:hover {
   filter: brightness(50%) !important;
   cursor: pointer;
   transition: all ease-in-out 100ms;
 }
-.carousel {
-  display: inline-flex;
-  overflow-x: hidden;
-  scroll-snap-type: x mandatory;
+.card-zoom {
+  @apply relative flex items-center justify-center m-3 overflow-hidden w-96 h-96 rounded-lg;
+}
+.card-zoom-image {
+  @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover cursor-pointer;
+}
+.card-zoom-text {
+  @apply absolute text-2xl font-black transition-all duration-500 ease-in-out transform scale-150 text-white;
+}
+.card-zoom:hover .card-zoom-image {
+  @apply scale-150;
+}
+
+.text-beige {
+  color: #ab9c8e;
+}
+
+.text-green {
+  color: #1c4140;
 }

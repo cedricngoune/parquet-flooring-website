@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": ["DOM", "ES5", "es2015.promise"],
+    "esModuleInterop": true,
+    "target": "es6",
+    "outDir": "dist",
+    "rootDir": "src",
+    "noStrictGenericChecks": true,
+    "baseUrl": "./src",
+    "strictNullChecks": true,
+    "watch": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
