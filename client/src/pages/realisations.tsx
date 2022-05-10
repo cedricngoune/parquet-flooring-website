@@ -4,7 +4,7 @@ import SectionTab from "components/section-tab/section-tab";
 const Realisations = () => {
   return (
     <section
-      className="mx-24 relative min-h-screen my-96"
+      className="mx-24 relative min-h-screen my-88"
       id="section-realisations"
     >
       <h1 className="text-beige text-9xl absolute -top-24 font-poppins uppercase tracking-tight z-0 opacity-10 font-black">
@@ -17,9 +17,7 @@ const Realisations = () => {
         </h2>
         <div className="flex-grow border-t border-black"></div>
       </div>
-      <div>
-        <SectionTab />
-      </div>
+      <SectionTab />
     </section>
   );
 };

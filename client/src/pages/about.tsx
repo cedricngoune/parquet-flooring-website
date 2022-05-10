@@ -26,7 +26,7 @@ const About = () => {
         </h2>
         <div className="flex-grow border-t border-black "></div>
       </div>
-      <div className="grid grid-cols-3 place-content-center my-36 gap-2">
+      <div className="grid grid-cols-3 place-content-center my-32 gap-2">
         <div className="relative w-11/12 py-6 px-6 rounded-lg border-2 border-green-800 bg-white z-0">
           <h1 className="text-2xl font-semibold text-center mt-3 uppercase text-beige">
             Atouts
