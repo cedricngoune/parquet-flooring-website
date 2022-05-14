@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import cardImg from "datas/images/icons/map_france.png";
 const divStyle = {
   minHeight: "100vh",
 };
@@ -70,7 +70,7 @@ const About = () => {
 
           <div className="text-center relative">
             <img
-              src="images/icons/map_france.png"
+              src={cardImg}
               className="object-contain h-96 w-auto"
               alt="Atout"
             />

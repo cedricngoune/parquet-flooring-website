@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Radiobutton from "components/radio-button/radio-button";
 import CustomerForm from "components/forms/customer-form";
 import BusinessForm from "components/forms/business-forms";
+import contact_img from "datas/images/sideImg.jpeg";
 
 const Contact = () => {
   const [selectedKeyword, setSelectedKeyword] = useState<string>("");
@@ -18,7 +19,7 @@ const Contact = () => {
         <div className="grid grid-cols-2  min-h-screen mx-20 my-36">
           <div className="w-full ">
             <img
-              src="images/sideImg.jpeg"
+              src={contact_img}
               alt=""
               className="bg-side-img w-full h-full bg-center object-cover bg-no-repeat"
             />

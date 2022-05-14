@@ -6,11 +6,23 @@
 @layer base {
   font-family: Poppins, Roboto, Lato;
 }
-.card-zoom-image:hover,
-.card:hover {
-  filter: brightness(50%) !important;
-  cursor: pointer;
-  transition: all ease-in-out 100ms;
+.card-project:hover .card-image {
+  filter: brightness(60%) !important;
+}
+.card-project {
+  @apply relative flex items-center justify-center m-3 overflow-hidden;
+}
+.card-image {
+  @apply w-80 h-auto transition-all rounded-lg duration-500 ease-in-out transform bg-center bg-cover;
+}
+.card-text {
+  @apply transition-all duration-500 ease-in-out scale-150 opacity-0;
+}
+.card-image:hover {
+  @apply scale-150 filter brightness-75;
+}
+.card-project:hover .card-text {
+  @apply opacity-100 scale-105;
 }
 .fade {
   animation: fade-in 500ms forwards;
