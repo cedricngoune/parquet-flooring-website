@@ -1,8 +1,4 @@
 import * as React from "react";
-import iconAtout from "assets/images/icons/atoutIcon.png";
-import iconMap from "assets/images/icons/locationIcon.png";
-import imgFrance from "assets/images/icons/map_france.png";
-import iconService from "assets/images/icons/serviceIcon.png";
 
 const divStyle = {
   minHeight: "100vh",
@@ -74,12 +70,12 @@ const About = () => {
 
           <div className="text-center relative">
             <img
-              src={imgFrance}
+              src="images/icons/map_france.png"
               className="object-contain h-96 w-auto"
               alt="Atout"
             />
-            <p className="font-light text-lg absolute top-32 left-0 right-0 ">
-              Dans toute la France
+            <p className="font-black text-green-800 text-lg absolute top-32 left-0 right-4 ">
+              France et pays limitrophes
             </p>
           </div>
         </div>

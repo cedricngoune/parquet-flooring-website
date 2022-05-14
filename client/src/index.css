@@ -12,17 +12,8 @@
   cursor: pointer;
   transition: all ease-in-out 100ms;
 }
-.card-zoom {
-  @apply relative flex items-center justify-center m-3 overflow-hidden w-96 h-96 rounded-lg;
-}
-.card-zoom-image {
-  @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover cursor-pointer;
-}
-.card-zoom-text {
-  @apply absolute text-2xl font-black transition-all duration-500 ease-in-out transform scale-150 text-white;
-}
-.card-zoom:hover .card-zoom-image {
-  @apply scale-150;
+.fade {
+  animation: fade-in 500ms forwards;
 }
 
 .text-beige {
@@ -31,4 +22,13 @@
 
 .text-green {
   color: #1c4140;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,79 +1,79 @@
-import parquetCover from "assets/images/Sol-carrières-sur-seines/cover.jpg";
-import imgParquetOne from "assets/images/Sol-carrières-sur-seines/one.jpg";
-import imgParquetTwo from "assets/images/Sol-carrières-sur-seines/two.jpg";
-import terrasseCover from "assets/images/terrase camaru-cabris/cover.png";
-import solCover from "assets/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/cover.jpg";
-import scaleCover from "assets/images/Escaliers/cover.jpg";
-import terrasse_one from "assets/images/terrase camaru-cabris/20210528_212304.png";
-import terrasse_two from "assets/images/terrase camaru-cabris/terrasse11.png";
-import terrasse_three from "assets/images/terrase camaru-cabris/terrasse14.png";
-import scaleImgOne from "assets/images/Escaliers/escalier1.jpg";
-import scaleImgTwo from "assets/images/Escaliers/escalier2.jpg";
-import scaleImgThree from "assets/images/Escaliers/escalier3.jpg";
-import scaleImgFour from "assets/images/Escaliers/escalier4.jpg";
-import scaleImgFive from "assets/images/Escaliers/escalier5.jpg";
-import solImgOne from "assets/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/20181231_114715.jpg";
-import solImgTwo from "assets/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/20181231_114716.jpg";
-import solImgThree from "assets/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/20181231_114725.jpg";
+import { uuid } from "utils/generateId";
 
 type ProjectType = "Particulier" | "Hotel" | "Magasin" | "Commerce";
 export interface IInfos {
   location: string;
-  area: string;
+  area?: number;
   projectType: ProjectType;
 }
 export interface ProjectProps {
+  id: number;
   title: string;
   images: Array<string>;
   infos?: IInfos;
 }
 
-export const projectData: Array<ProjectProps> = [
+export const projectGrid: Array<ProjectProps> = [
   {
-    title: "Parquet",
-    images: [parquetCover, imgParquetOne, imgParquetTwo],
-    infos: {
-      location: "Carrières sur seine (78)",
-      area: "",
-      projectType: "Particulier",
-    },
-  },
-  {
-    title: "Terrasse",
-    images: [terrasseCover, terrasse_one, terrasse_two, terrasse_three],
-    infos: {
-      location: "Cabri(35)",
-      area: "",
-      projectType: "Particulier",
-    },
-  },
-  {
-    title: "Escaliers",
+    id: 1,
+    title: "Professionnels",
     images: [
-      scaleCover,
-      scaleImgOne,
-      scaleImgTwo,
-      scaleImgThree,
-      scaleImgFour,
-      scaleImgFive,
+      "images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/cover.jpg",
+      "images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/one.jpg",
+      "images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/two.jpg",
+      "images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/three.jpg",
     ],
     infos: {
-      location: "Carrières sur seine (78)",
-      area: "",
-      projectType: "Particulier",
-    },
-  },
-  {
-    title: "Pose de sols",
-    images: [solCover],
-    infos: {
       location: "Marseilles (13)",
-      area: "",
       projectType: "Magasin",
     },
   },
+
   {
-    title: "Professionnels",
-    images: [],
+    id: 2,
+    title: "Terrasse",
+    images: [
+      "images/terrase camaru-cabris/cover.png",
+      "images/terrase camaru-cabris/20210528_212304.png",
+      "images/terrase camaru-cabris/terrasse11.png",
+      "images/terrase camaru-cabris/terrasse14.png",
+      "images/terrase camaru-cabris/20210514_155956.png",
+      "images/terrase camaru-cabris/20210519_183011.png",
+    ],
+    infos: {
+      location: "Cabri(35)",
+      projectType: "Particulier",
+    },
+  },
+  {
+    id: 3,
+    title: "Escaliers",
+    images: [
+      "images/Escaliers/cover.jpg",
+      "images/Escaliers/escalier1.jpg",
+      "images/Escaliers/escalier2.jpg",
+      "images/Escaliers/escalier3.jpg",
+      "images/Escaliers/escalier4.jpg",
+      "images/Escaliers/escalier5.jpg",
+    ],
+    infos: {
+      location: "Carrières sur seine (78)",
+      projectType: "Particulier",
+    },
+  },
+  {
+    id: 4,
+    title: "Pose de sols",
+    images: [
+      "images/Sol-carrières-sur-seines/cover.jpg",
+      "images/Sol-carrières-sur-seines/one.jpg",
+      "images/Sol-carrières-sur-seines/two.jpg",
+    ],
+    infos: {
+      location: "Carrières sur seines (78)",
+      projectType: "Particulier",
+    },
   },
 ];
+
+export const projectsCover = projectGrid.map((image) => image.images[0]);

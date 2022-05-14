@@ -1,5 +1,5 @@
 import * as React from "react";
-import SectionTab from "components/section-tab/section-tab";
+import SectionTab from "components/project/section-tab";
 
 const Realisations = () => {
   return (

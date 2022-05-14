@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-cover": "url('/src/assets/images/banner.jpg')",
+        "hero-cover": "url('App/banner.jpg')",
       },
       margin: {
         "2em": "2em",

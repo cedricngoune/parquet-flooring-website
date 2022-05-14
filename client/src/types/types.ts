@@ -10,6 +10,7 @@ export interface IFormInput {
   subject: SubjectEnum;
   object: string;
   area: number;
+  project_type: string;
   message: string;
 }
 

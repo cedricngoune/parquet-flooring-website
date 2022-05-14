@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from "react";
-import DatePicker from "components/datepicker/datepicker";
+import AtomDatePicker from "components/datepicker/datepicker";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IFormInput, Subject } from "types/types";
 
@@ -10,9 +10,8 @@ const subjects: Subject[] = [
 ];
 
 const CustomerForm = () => {
-  const [selectedSubject, setSelectedSubject] = useState("");
+  const [selectedSubject, setSelectedSubject] = useState(subjects[0].value);
   const [startDate, setStartDate] = useState<Date>(new Date());
-
   const {
     register,
     formState: { errors },
@@ -27,7 +26,7 @@ const CustomerForm = () => {
   };
 
   return (
-    <form className="w-full px-5 py-5" onSubmit={handleSubmit(onSubmit)}>
+    <form className="w-full px-5 py-5 fade" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 gap-2">
         <div className="mt-8">
           <label className="uppercase text-sm text-black font-light">
@@ -115,30 +114,42 @@ const CustomerForm = () => {
             </select>
           </div>
           {selectedSubject === subjects[0].value ? (
-            <div className="grid grid-cols-2 gap-2">
-              <div className="mt-8">
+            <>
+              <div className="grid grid-cols-2 gap-5">
+                <div className="mt-8 fade">
+                  <label className="uppercase text-sm text-black font-light">
+                    Surface (m2)
+                  </label>
+                  <input
+                    {...register("area")}
+                    type="number"
+                    className="w-full rounded-md shadow-md focus:outline-none focus:shadow-outline cursor-pointer mt-2 p-3"
+                  />
+                </div>
+                <div className="mt-8 fade">
+                  <label className="uppercase text-sm text-black font-light">
+                    Date de démarrage
+                  </label>
+                  <AtomDatePicker
+                    setDate={(date: Date): void => {
+                      setStartDate(date);
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="mt-8 fade">
                 <label className="uppercase text-sm text-black font-light">
-                  Surface (m2)
+                  Type de projet:
                 </label>
                 <input
-                  {...register("area")}
-                  type="number"
-                  className="w-full rounded-md shadow-md focus:outline-none focus:shadow-outline cursor-pointer mt-2 p-3"
+                  {...register("project_type")}
+                  type="text"
+                  className="w-full rounded-md shadow-md focus:outline-none focus:shadow-outline  mt-2 p-3"
                 />
               </div>
-              <div className="mt-8">
-                <label className="uppercase text-sm text-black font-light">
-                  Date de démarrage
-                </label>
-                <DatePicker
-                  setDate={(date: Date): void => {
-                    setStartDate(date);
-                  }}
-                />
-              </div>
-            </div>
+            </>
           ) : selectedSubject === subjects[1].value ? (
-            <div className="mt-8">
+            <div className="mt-8 fade">
               <label className="uppercase text-sm text-black font-light">
                 Objet de votre message
               </label>

@@ -3,8 +3,6 @@ import Radiobutton from "components/radio-button/radio-button";
 import CustomerForm from "components/forms/customer-form";
 import BusinessForm from "components/forms/business-forms";
 
-import sideImg from "assets/images/sideImg.jpeg";
-
 const Contact = () => {
   const [selectedKeyword, setSelectedKeyword] = useState<string>("");
   const keywords: Array<string> = ["Un particulier", "Un professionnel"];
@@ -20,7 +18,7 @@ const Contact = () => {
         <div className="grid grid-cols-2  min-h-screen mx-20 my-36">
           <div className="w-full ">
             <img
-              src={sideImg}
+              src="images/sideImg.jpeg"
               alt=""
               className="bg-side-img w-full h-full bg-center object-cover bg-no-repeat"
             />
