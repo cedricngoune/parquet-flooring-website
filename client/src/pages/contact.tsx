@@ -25,13 +25,13 @@ const Contact = () => {
             />
           </div>
 
-          <div className=" bg-gray-100 ">
+          <div className=" bg-white font-poppins ">
             <div className="my-10 text-center">
               <h2 className="text-3xl">Vous êtes ?:</h2>{" "}
             </div>
             <fieldset className="my-10 flex justify-around form-check">
               {keywords.map((keyword, index) => (
-                <div key={index}>
+                <div key={index} className="font-light">
                   <Radiobutton
                     label={keyword}
                     id={keyword}

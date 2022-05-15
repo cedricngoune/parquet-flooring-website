@@ -19,7 +19,7 @@ const Radiobutton: FC<RadioProps> = ({
   return (
     <>
       <input
-        className="rounded-full h-4 w-4 duration-200 mt-1 float-left mr-2 cursor-pointer"
+        className="rounded-full h-4 w-4 duration-200 mt-1 font-light float-left mr-2 cursor-pointer"
         type="radio"
         name="radio"
         id={id}

@@ -9,7 +9,7 @@ const ProjectList = () => {
           <div className="relative text-center  card-project">
             <img
               src={images[0]}
-              className="card-image"
+              className="w-80 card-image"
               loading="lazy"
               alt={title}
             />
