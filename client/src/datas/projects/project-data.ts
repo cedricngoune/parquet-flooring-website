@@ -1,4 +1,3 @@
-import { uuid } from "utils/generateId";
 import cover from "datas/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifie-pergo/cover.jpg";
 import img_one from "datas/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifie-pergo/one.jpg";
 import img_two from "datas/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifie-pergo/two.jpg";

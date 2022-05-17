@@ -1,6 +1,6 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Banner = () => {
   return (

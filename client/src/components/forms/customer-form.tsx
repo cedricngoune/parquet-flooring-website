@@ -11,7 +11,7 @@ const subjects: Subject[] = [
 
 const CustomerForm = () => {
   const [selectedSubject, setSelectedSubject] = useState(subjects[0].value);
-  const [startDate, setStartDate] = useState<Date>(new Date());
+  const [, setStartDate] = useState<Date>(new Date());
   const {
     register,
     formState: { errors },

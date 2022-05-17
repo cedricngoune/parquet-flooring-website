@@ -1,7 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IFormInput, Subject } from "types/types";
-import DatePicker from "components/datepicker/datepicker";
 import AtomDatePicker from "components/datepicker/datepicker";
 
 const subjects: Subject[] = [
@@ -12,7 +11,7 @@ const subjects: Subject[] = [
 
 const BusinessForm = () => {
   const [selectedSubject, setSelectedSubject] = useState(subjects[0].value);
-  const [startDate, setStartDate] = useState<Date>(new Date());
+  const [, setStartDate] = useState<Date>(new Date());
 
   const {
     register,
