@@ -1,0 +1,3 @@
+[submodule "parquet-flooring-website"]
+	path = parquet-flooring-website
+	url = https://github.com/cedricngoune/parquet-flooring-website

@@ -1,26 +1,26 @@
 import { uuid } from "utils/generateId";
-import cover from "datas/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/cover.jpg";
-import img_one from "datas/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/one.jpg";
-import img_two from "datas/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/two.jpg";
-import img_three from "datas/images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/three.jpg";
+import cover from "../images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/cover.jpg";
+import img_one from "../images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/one.jpg";
+import img_two from "../images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/two.jpg";
+import img_three from "../images/VIEUX CAMPEUR/MARSEILLE-magasin-sol stratifié pergo/three.jpg";
 
-import t_cover from "datas/images/terrase camaru-cabris/cover.png";
-import t_one from "datas/images/terrase camaru-cabris/20210528_212304.png";
-import t_two from "datas/images/terrase camaru-cabris/terrasse11.png";
-import t_three from "datas/images/terrase camaru-cabris/terrasse14.png";
-import t_four from "datas/images/terrase camaru-cabris/20210514_155956.png";
-import t_five from "datas/images/terrase camaru-cabris/20210519_183011.png";
+import t_cover from "../images/terrase camaru-cabris/cover.png";
+import t_one from "../images/terrase camaru-cabris/20210528_212304.png";
+import t_two from "../images/terrase camaru-cabris/terrasse11.png";
+import t_three from "../images/terrase camaru-cabris/terrasse14.png";
+import t_four from "../images/terrase camaru-cabris/20210514_155956.png";
+import t_five from "../images/terrase camaru-cabris/20210519_183011.png";
 
-import scale_cover from "datas/images/Escaliers/cover.jpg";
-import scale_one from "datas/images/Escaliers/escalier1.jpg";
-import scale_two from "datas/images/Escaliers/escalier2.jpg";
-import scale_three from "datas/images/Escaliers/escalier3.jpg";
-import scale_four from "datas/images/Escaliers/escalier4.jpg";
-import scale_five from "datas/images/Escaliers/escalier5.jpg";
+import scale_cover from "../images/Escaliers/cover.jpg";
+import scale_one from "../images/Escaliers/escalier1.jpg";
+import scale_two from "../images/Escaliers/escalier2.jpg";
+import scale_three from "../images/Escaliers/escalier3.jpg";
+import scale_four from "../images/Escaliers/escalier4.jpg";
+import scale_five from "../images/Escaliers/escalier5.jpg";
 
-import floor_cover from "datas/images/Sol-carrières-sur-seines/cover.jpg";
-import floor_one from "datas/images/Sol-carrières-sur-seines/one.jpg";
-import floor_two from "datas/images/Sol-carrières-sur-seines/two.jpg";
+import floor_cover from "../images/Sol-carrières-sur-seines/cover.jpg";
+import floor_one from "../images/Sol-carrières-sur-seines/one.jpg";
+import floor_two from "../images/Sol-carrières-sur-seines/two.jpg";
 
 type ProjectType = "Particulier" | "Hotel" | "Magasin" | "Commerce";
 export interface IInfos {

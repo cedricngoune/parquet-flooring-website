@@ -10,4 +10,5 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+
+CMD ["npm", "install", "npm@8.10.0", "npm", "start"]
