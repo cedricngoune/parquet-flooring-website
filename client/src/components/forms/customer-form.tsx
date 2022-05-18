@@ -172,7 +172,7 @@ const CustomerForm = () => {
       </div>
       <button
         type="submit"
-        className="w-full mt-10 px-6 py-5 bg-green-900 hover:bg-white hover:text-black rounded-md shadow-md transition-all duration-75 text-white "
+        className="bg-green-900 cursor-pointer text-2xl border group hover:border-green-900 hover:bg-green-900  border-white transition-all text-white py-3 px-6 my-7"
       >
         Envoyer message
       </button>
