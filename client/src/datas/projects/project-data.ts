@@ -38,7 +38,7 @@ export interface ProjectProps {
 export const projectGrid: Array<ProjectProps> = [
   {
     id: 1,
-    title: "Professionnels",
+    title: "Professionnel",
     images: [cover, img_one, img_two, img_three],
     infos: {
       name: "Vieux campeur",

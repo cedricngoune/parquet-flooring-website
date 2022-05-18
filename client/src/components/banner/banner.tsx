@@ -9,16 +9,16 @@ const Banner = () => {
       <div className="bg-hero-cover bg-cover bg-center ">
         <div className="w-full h-screen relative flex justify-center items-center flex-col">
           <div className="box-content text-center ">
-            <h1 className="text-7xl font-extrabold text-white">
+            <h1 className="text-6xl font-extrabold text-white">
               Références & Excellence
             </h1>
-            <p className="text-3xl text-white font-light my-5">
-              Spécialiste dans la pose de parquets et de sols
+            <p className="text-2xl text-white font-light my-5">
+              Spécialiste du parquet et des sols
             </p>
             <Link
               to="section-contact"
               type="button"
-              className="bg-transparent cursor-pointer text-2xl border group hover:border-green-900 hover:bg-green-900  border-white transition-all text-white py-3 px-6 my-7"
+              className="bg-transparent cursor-pointer text-1xl border  font-light group hover:border-green-900  hover:bg-green-900   border-white transition-all text-white py-3 px-6 my-7"
               spy={true}
               smooth={true}
               activeClass="active"

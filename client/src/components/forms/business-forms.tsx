@@ -175,7 +175,7 @@ const BusinessForm = () => {
         type="submit"
         className="bg-green-900 cursor-pointer text-2xl border group hover:border-green-900 hover:bg-green-900  border-white transition-all text-white py-3 px-6 my-7"
       >
-        Envoyer message
+        Envoyer
       </button>
     </form>
   );

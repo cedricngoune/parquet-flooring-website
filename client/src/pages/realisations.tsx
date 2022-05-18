@@ -3,10 +3,7 @@ import SectionTab from "components/project/section-tab";
 
 const Realisations = () => {
   return (
-    <section
-      className="mx-24 relative min-h-screen my-88"
-      id="section-realisations"
-    >
+    <section className="mx-24 relative min-h-screen " id="section-realisations">
       <h1 className="text-beige text-9xl absolute -top-24 font-poppins uppercase tracking-tight z-0 opacity-10 font-black">
         Réalisations
       </h1>

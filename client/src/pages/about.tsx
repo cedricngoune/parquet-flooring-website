@@ -24,12 +24,12 @@ const About = () => {
       </div>
       <div className="grid grid-cols-3 place-content-center my-32 gap-2">
         <div className="relative w-11/12 py-6 px-6 rounded-lg border-2 border-green-800 bg-white z-0">
-          <h1 className="text-2xl font-semibold text-center mt-3 uppercase text-beige">
+          <h1 className="text-2xl font-semibold text-center mt-16 uppercase text-beige">
             Atouts
           </h1>
 
           <div className="mt-7">
-            <ul className="mx-6 font-poppins  text-lg to-black font-light leading-8">
+            <ul className=" mx-6 font-poppins  text-lg to-black font-light leading-8">
               <li className="list-disc">Plus de 15 ans d'expériences</li>
               <li className="list-disc">
                 Une expertise certifiée par Pergo et Panaget
@@ -44,7 +44,7 @@ const About = () => {
           </div>
         </div>
         <div className="relative w-11/12  py-6 px-6 rounded-lg border-2 border-green-800 bg-white z-0 ">
-          <h1 className="text-2xl font-semibold text-center mt-3 uppercase text-beige">
+          <h1 className="text-2xl font-semibold text-center mt-16  uppercase text-beige">
             Prestations
           </h1>
           <div className="mt-7">
@@ -64,18 +64,18 @@ const About = () => {
           </div>
         </div>
         <div className="relative w-11/12  py-6 px-6 rounded-lg border-2 border-green-800 bg-white z-0">
-          <h1 className="text-2xl font-semibold text-center mt-3 uppercase text-beige">
+          <h1 className="text-2xl font-semibold text-center mt-16  uppercase text-beige">
             Zones d'interventions
           </h1>
 
-          <div className="text-center relative">
+          <div className="text-center relative -mb-8">
             <img
               src={cardImg}
               className="object-contain h-96 w-auto"
               alt="Atout"
             />
             <p className="font-black text-green-800 text-lg absolute top-32 left-0 right-4 ">
-              France et pays limitrophes
+              France et <br /> pays limitrophes
             </p>
           </div>
         </div>

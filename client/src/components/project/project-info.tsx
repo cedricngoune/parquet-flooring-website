@@ -26,9 +26,21 @@ const ProjectInfo = () => {
   }, [id]);
 
   return (
-    <div className="min-h-screen">
-      <div className="w-full flex justify-evenly grid-cols-2 ">
-        <div className="-mx-7 my-7 grid grid-cols-3 items-center gap-4">
+    <div className="min-h-screen fade mx-24 my-20 overflow-hidden">
+      <div className="relative ">
+        <h1 className="text-beige xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl font-poppins uppercase tracking-tight opacity-10 font-black">
+          {state?.title}
+        </h1>
+        <div className="relative md:text-lg sm:text-xs -mt-6 flex items-center">
+          <div className="flex-grow border-t border-black"></div>
+          <h2 className="text-2xl text-center font-poppins font-black uppercase text-beige ">
+            {state?.infos?.name}
+          </h2>
+          <div className="flex-grow border-t border-black"></div>
+        </div>
+      </div>
+      <div className="w-full xl:mt-14 lg:flex   xl:flex justify-between  ">
+        <div className=" my-7 grid grid-cols-3 items-center gap-4">
           {state &&
             state?.images?.map((image, id) => (
               <img
@@ -40,13 +52,9 @@ const ProjectInfo = () => {
               />
             ))}
         </div>
-        <div className="relative flex flex-col">
-          <h3 className="text-3xl font-Karla my-7">
-            {state && state?.infos?.name}
-          </h3>
-
+        <div className="relative flex flex-col mr-20 mt-5">
           <div className="text-xl font-poppins font-light block leading-loose">
-            Type de projet: {state?.title} <br />
+            Prestation(s): <br />
             Lieu : {state && state?.infos?.location} <br />
             Surface : {state?.infos?.area}
           </div>
