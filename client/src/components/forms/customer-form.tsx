@@ -26,7 +26,7 @@ const CustomerForm = () => {
   };
 
   return (
-    <form className="w-full mx-8 py-5 fade" onSubmit={handleSubmit(onSubmit)}>
+    <form className="w-full py-5 fade" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 gap-2">
         <div className="mt-8">
           <label className="uppercase text-sm text-black font-light">

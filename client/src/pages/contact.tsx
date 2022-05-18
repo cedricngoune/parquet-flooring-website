@@ -15,16 +15,22 @@ const Contact = () => {
 
   return (
     <>
-      <section title="section-contact" id="section-contact">
-        <div className="grid grid-cols-2  min-h-screen mx-20 my-36">
-          <div className="w-full ">
-            <img
-              src={contact_img}
-              alt=""
-              className="bg-side-img w-full h-full bg-center object-cover bg-no-repeat"
-            />
-          </div>
-
+      <section
+        title="section-contact"
+        id="section-contact"
+        className="mx-24 relative min-h-screen my-88"
+      >
+        <h1 className="text-beige text-9xl absolute -top-24 font-poppins uppercase tracking-tight z-0 opacity-10 font-black">
+          Contact
+        </h1>
+        <div className="relative flex items-center">
+          <div className="flex-grow border-t border-black"></div>
+          <h2 className="text-2xl text-center font-poppins font-black uppercase text-beige z-10">
+            Contactez nous
+          </h2>
+          <div className="flex-grow border-t border-black"></div>
+        </div>
+        <div className="grid grid-cols-2  min-h-screen  my-36">
           <div className=" bg-white font-poppins ">
             <div className="my-10 text-center">
               <h2 className="text-3xl">Vous êtes ?:</h2>{" "}
@@ -48,6 +54,13 @@ const Contact = () => {
             ) : (
               <></>
             )}
+          </div>
+          <div className="w-9/12 h-auto ml-56 right-9 ">
+            <img
+              src={contact_img}
+              alt=""
+              className="bg-side-img w-full h-full bg-center object-cover bg-no-repeat"
+            />
           </div>
         </div>
       </section>
