@@ -17,9 +17,9 @@ import scale_three from "datas/images/Escaliers/escalier3.jpg";
 import scale_four from "datas/images/Escaliers/escalier4.jpg";
 import scale_five from "datas/images/Escaliers/escalier5.jpg";
 
-import floor_cover from "datas/images/Sol-carrières-sur-seines/cover.jpg";
-import floor_one from "datas/images/Sol-carrières-sur-seines/one.jpg";
-import floor_two from "datas/images/Sol-carrières-sur-seines/two.jpg";
+import villa_img_cover from "datas/images/VILLA_NICE/img_153133.jpg";
+import villa_img_one from "datas/images/VILLA_NICE/one.jpeg";
+import villa_img_two from "datas/images/VILLA_NICE/two.png";
 
 type ProjectType = "Particulier" | "Hotel" | "Magasin" | "Commerce";
 export interface IInfos {
@@ -77,9 +77,10 @@ export const projectGrid: Array<ProjectProps> = [
   {
     id: 4,
     title: "Pose de sols",
-    images: [floor_cover, floor_one, floor_two],
+    images: [villa_img_cover, villa_img_one, villa_img_two],
     infos: {
-      location: "Carrières sur seines (78)",
+      name: "Sols",
+      location: "Nice (06)",
       projectType: "Particulier",
     },
   },
